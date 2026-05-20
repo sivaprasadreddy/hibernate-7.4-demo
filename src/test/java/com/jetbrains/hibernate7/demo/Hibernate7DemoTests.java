@@ -21,7 +21,7 @@ class Hibernate7DemoTests {
 
     @BeforeAll
     static void init() {
-        sessionFactory = HibernateUtils.getSessionFactory();
+        sessionFactory = HibernateUtils.getSessionFactory(HibernateUtils.DB_H2);
     }
 
     @Test
