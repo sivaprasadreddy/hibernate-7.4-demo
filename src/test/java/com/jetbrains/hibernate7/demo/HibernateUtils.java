@@ -14,7 +14,6 @@ public class HibernateUtils {
                 Product.class,
                 Order.class,
                 OrderItem.class
-                //,DefaultChangelog.class
         );
         if(db.equals(DB_POSTGRES)) {
             return new HibernatePersistenceConfiguration("Default")

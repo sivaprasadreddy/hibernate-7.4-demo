@@ -93,12 +93,6 @@ class Hibernate7DemoTests {
             final var auditLog = AuditLogFactory.create( session );
             final var revisionIds = auditLog.getChangesets( Order.class, newOrder.id );
             assertEquals( 2, revisionIds.size() );
-
-            /*final var revisions = session.createSelectionQuery(
-                    "from DefaultChangelog where id in :ids order by id",
-                    DefaultChangelog.class
-            ).setParameter( "ids", revisionIds ).getResultList();
-            assertEquals( 2, revisions.size() );*/
         }
     }
 }

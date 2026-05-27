@@ -47,12 +47,6 @@ create table products_history (
       check (effective_to is null or effective_to > effective_from)
 );
 
-create table REVINFO (
-     REV bigint not null,
-     REVTSTMP bigint not null,
-     primary key (REV)
-);
-
 create table orders_aud_log (
     id bigint not null,
     order_number uuid not null,
